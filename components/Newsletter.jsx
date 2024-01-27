@@ -2,15 +2,16 @@ import Image from "next/image";
 
 const Newsletter = () => {
   return (
-    <section className=" mt-28 pb-20 bg-gradient-to-b from-transparent to-[#110e19]">
+    <section className=" mt-28 pb-20 bg-gradient-to-b from-transparent to-[#110e198b]">
       <div className="min-h-[210px] relative rounded-2xl">
         <Image
-          src="/assets/images/bannerPic.png"
+          src="/assets/images/newsletterBg.png"
           alt="banner"
           width={409}
           height={208}
           className="w-full h-[210px] object-cover rounded-2xl absolute top-0 left-0 z-10"
         />
+        <div className="newsletter-overlay absolute top-0 left-0 w-full h-full z-20 rounded-2xl"></div>
 
         <div className="absolute bottom-0 left-10 z-10">
           <Image

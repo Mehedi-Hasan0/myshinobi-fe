@@ -10,7 +10,7 @@ const Navbar = () => {
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full transition ease transform duration-300`;
   return (
     <>
-      <nav className="container-padding lg:flex items-center justify-between gap-5 py-4 2xl:py-8 hidden">
+      <nav className="container-padding lg:flex items-center justify-between gap-5 py-4 2xl:py-8 hidden relative z-40">
         <div className="flex items-center lg:gap-8 2xl:gap-14">
           <Image
             src="/assets/images/logo.png"
@@ -58,7 +58,7 @@ const Navbar = () => {
       </nav>
 
       {/* for mobile */}
-      <nav className="flex items-center justify-between lg:hidden container-padding py-2 relative">
+      <nav className="flex items-center justify-between lg:hidden container-padding py-2 relative z-40">
         <Image
           src="/assets/images/logo.png"
           alt="logo"

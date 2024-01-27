@@ -1,9 +1,11 @@
+import { footerNeedhelp, footerProduct, footerSocialLink } from "@/constant";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="text-white container-padding">
-      <section className="py-10 lg:py-16 flex flex-col justify-center items-center gap-4 lg:gap-8">
+    <footer className="text-white">
+      <section className="py-10 lg:py-16 flex flex-col justify-center items-center gap-4 lg:gap-8  container-padding">
         <div className="flex flex-col justify-center items-center gap-2 lg:gap-3 2xl:gap-4">
           <h2 className="text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-center">
             Katana Inu is a
@@ -53,15 +55,16 @@ const Footer = () => {
       </section>
 
       <section
-        className="relative bg-no-repeat bg-center"
+        className="relative bg-no-repeat bg-center container-padding"
         style={{ backgroundImage: "url('/assets/images/footerBg.png')" }}
       >
         {/* overlay */}
         <div className="absolute w-full h-full left-0 top-0 footer-overlay"></div>
 
         {/* content */}
-        <div className="flex items-center flex-wrap gap-5 justify-between relative z-40 py-20">
-          <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
+        <div className="flex gap-8 justify-between flex-wrap md:flex-nowrap relative z-40 py-20">
+          {/* logo and texts */}
+          <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 flex-1">
             {/* images */}
             <Image
               src="/assets/images/logo2.png"
@@ -101,12 +104,141 @@ const Footer = () => {
             </div>
             {/* texts */}
             <div className="flex flex-col gap-3 lg:gap-5">
-              <h4>
+              <h4 className="text-[#D0D4EA] text-xs md:text-sm 2xl:text-base">
                 KATANA INU is a project from{" "}
-                <span className=""> CHAINVISION GAMES</span>
+                <span className="text-[#F9C306]"> CHAINVISION GAMES</span>
               </h4>
+
+              <div className="flex flex-col gap-2 lg:gap-4">
+                <p className="text-[#7A7977] text-xs lg:text-sm">
+                  Nothing on this website constitutes financial advice, and it
+                  is always recommended to consult a qualified financial advisor
+                  before participating in any token or NFT purchases.
+                </p>
+                <p className="text-[#7A7977] text-xs lg:text-sm">
+                  Buy Katana Inu NFTs only from katanainu.com or kainu.io
+                  subdomains to be safe. Check the website's address for on our
+                  main website www.katanainu.com and go to the "Minting NFTs"
+                  section to verify.
+                  <span className="text-[#F9C306]">
+                    {" "}
+                    Ask in our telegram or discord channel for confirmation.
+                    Avoid other websites!
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
+
+          {/* products */}
+          <div className="flex flex-col gap-2 lg:gap-4 mt-16 lg:flex-auto">
+            <p className="text-sm lg:text-base 2xl:text-lg text-white font-bold">
+              Products
+            </p>
+
+            {footerProduct.map((link) => (
+              <Link
+                href={link.path}
+                key={link.label}
+                className="px-3 py-2 cursor-pointer text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base w-fit"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          {/* need help */}
+          <div className="flex flex-col gap-2 lg:gap-4 mt-16 lg:flex-auto relative z-30">
+            <p className="text-sm lg:text-base 2xl:text-lg text-white font-bold">
+              Need Help?
+            </p>
+
+            {footerNeedhelp.map((link) => (
+              <Link
+                href={link.path}
+                key={link.label}
+                className="px-3 py-2 cursor-pointer text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base w-fit"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex-1 min-w-[300px] xl:min-w-[400px] relative hidden lg:block z-10">
+            <div className="">
+              <Image
+                src="/assets/images/glow1.png"
+                alt="overlay glow"
+                width={397}
+                height={397}
+                className="absolute z-30 top-0 left-0 w-[300px] xl:w-[390px]"
+              />
+              <Image
+                src="/assets/images/glow2.png"
+                alt="overlay glow"
+                width={397}
+                height={397}
+                className="absolute z-30 top-0 left-0 w-[300px] xl:w-[390px]"
+              />
+              <Image
+                src="/assets/images/glow3.png"
+                alt="overlay glow"
+                width={397}
+                height={397}
+                className="absolute z-30 top-0 left-0 w-[300px] xl:w-[390px]"
+              />
+              <Image
+                src="/assets/images/glow4.png"
+                alt="overlay glow"
+                width={397}
+                height={397}
+                className="absolute z-30 top-0 left-0 w-[300px] xl:w-[390px]"
+              />
+            </div>
+          </div>
+          <Image
+            src="/assets/images/nft/footerNft.png"
+            alt="overlay glow"
+            width={831}
+            height={789}
+            className="absolute z-20 bottom-0 -right-10 xl:right-0 w-[600px] hidden lg:block"
+          />
+        </div>
+      </section>
+
+      <section
+        className="flex flex-row items-center md:justify-between justify-center gap-5 flex-wrap py-6 md:py-8 lg:py-10 2xl:py-11 border-t border-[#E4E4E41A] bg-black container-padding"
+        // style={{ background: "black" }}
+      >
+        <p className="text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base">
+          © All Right Reserved, mint.katanainu.com
+        </p>
+
+        {/* social links */}
+        <div className="flex items-center gap-2 lg:gap-4">
+          {footerSocialLink.map((link) => (
+            <Link
+              href={link.path}
+              key={link.label}
+              className="p-2 rounded-lg bg-[#FFFFFF1A]"
+            >
+              <Image
+                src={link.imgPath}
+                alt={link.label}
+                width={16}
+                height={16}
+              />
+            </Link>
+          ))}
+        </div>
+
+        {/* terms and others */}
+        <div className="flex items-center">
+          <p className="px-3 py-2 text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base">
+            Terms of Service
+          </p>
+          <p className="px-3 py-2 text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base">
+            Cookies Policies
+          </p>
         </div>
       </section>
     </footer>
