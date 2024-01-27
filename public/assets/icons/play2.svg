@@ -1,0 +1,25 @@
+<svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Play">
+<g id="Play Circle" filter="url(#filter0_f_1317_2505)">
+<circle cx="54" cy="54" r="46.1607" stroke="#F9C306" stroke-opacity="0.2" stroke-width="1.67857"/>
+</g>
+<g id="Play Circle_2" filter="url(#filter1_b_1317_2505)">
+<circle cx="54" cy="54" r="47" fill="#0E0C15" fill-opacity="0.24"/>
+</g>
+<circle id="Play Circle_3" cx="54.0014" cy="54.0001" r="33.5714" fill="#F9C306" fill-opacity="0.2"/>
+<path id="Polygon 3" d="M64.7852 50.536C67.4518 52.0756 67.4518 55.9246 64.7852 57.4642L51.6066 65.0728C48.9399 66.6124 45.6066 64.6879 45.6066 61.6087L45.6066 46.3914C45.6066 43.3122 48.9399 41.3877 51.6066 42.9273L64.7852 50.536Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_f_1317_2505" x="0.285715" y="0.285715" width="107.429" height="107.429" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="3.35714" result="effect1_foregroundBlur_1317_2505"/>
+</filter>
+<filter id="filter1_b_1317_2505" x="-6.42857" y="-6.42857" width="120.857" height="120.857" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="6.71429"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1317_2505"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1317_2505" result="shape"/>
+</filter>
+</defs>
+</svg>

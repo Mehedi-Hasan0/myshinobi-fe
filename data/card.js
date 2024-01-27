@@ -72,3 +72,24 @@ export const latestBuys =
 }
 
 export const latestBuysData = [latestBuys, latestBuys, latestBuys, latestBuys]
+
+export const mediaData = [
+    {
+        imgPath: "/assets/images/media1.png",
+        playSvg: "/assets/icons/play2.svg",
+        mediaName: "Star Craft Gameplay (2023)",
+        mediaDesc: " Unleash strategic brilliance in the interstellar battlefield of StarCraft 2023, where every decision shapes the fate of galaxies. Engage, conquer, thrive!"
+    },
+    {
+        imgPath: "/assets/images/media2.png",
+        playSvg: "/assets/icons/play2.svg",
+        mediaName: "Star Craft Gameplay (2023)",
+        mediaDesc: " Unleash strategic brilliance in the interstellar battlefield of StarCraft 2023, where every decision shapes the fate of galaxies. Engage, conquer, thrive!"
+    },
+    {
+        imgPath: "/assets/images/media3.png",
+        playSvg: "/assets/icons/play2.svg",
+        mediaName: "Star Craft Gameplay (2023)",
+        mediaDesc: " Unleash strategic brilliance in the interstellar battlefield of StarCraft 2023, where every decision shapes the fate of galaxies. Engage, conquer, thrive!"
+    },
+]

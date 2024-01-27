@@ -19,14 +19,14 @@ const Newsletter = () => {
             alt="nft"
             width={409}
             height={385}
-            className="w-[340px]"
+            className="w-[340px] opacity-90 md:opacity-100"
           />
         </div>
         {/* overlay */}
         <div className=" bg-gradient-to-b from-transparent to-[#0c0c1586] absolute w-full h-full bottom-0 left-0 z-20"></div>
         {/* overlay */}
 
-        <div className="flex justify-center items-center relative z-40 top-16 left-16">
+        <div className="flex justify-center items-center relative z-40 top-16 w-fit mx-auto">
           <div className="flex flex-col items-center gap-3">
             <p className="text-[#E4E4E4] text-base lg:text-lg xl:text-xl font-medium uppercase">
               Don’t miss our latest News
@@ -34,7 +34,7 @@ const Newsletter = () => {
 
             <label
               htmlFor="newsLetter"
-              className="bg-[#0E0C15D4] rounded-md p-2 min-w-[200px] lg:min-w-[500px] flex items-stretch gap-5 cursor-pointer"
+              className="bg-[#0E0C15D4] rounded-md p-2 w-[280px] md:min-w-[200px] lg:min-w-[500px] flex items-stretch gap-5 cursor-pointer"
             >
               <input
                 type="text"
