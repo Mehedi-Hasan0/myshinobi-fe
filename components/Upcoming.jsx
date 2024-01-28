@@ -59,7 +59,7 @@ const Upcoming = () => {
     <>
       {/* current live carousel */}
       <section className="mb-16">
-        <div className="flex flex-col sm:flex-row items-end sm:items-center justify-between sm:px-5 mt-16 mb-5 md:px-0 border-b border-[#30373F] pb-6 gap-5">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between sm:px-5 mt-16 mb-5 md:px-0 border-b border-[#30373F] pb-6 gap-5">
           <div className="flex items-center gap-2 sm:gap-5">
             <span className="text-[#F9C306] sm:underline underline-offset-2 md:underline-offset-8 font-medium text-xs sm:text-sm 2xl:text-lg uppercase cursor-pointer">
               upcoming in-game nfts
@@ -78,15 +78,17 @@ const Upcoming = () => {
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <button className="button-navigate upcoming-prev">
-              <ArrowRight />
-              {/* next */}
-            </button>
-            <button className="button-navigate upcoming-next">
-              <ArrowLeft />
-              {/* prev */}
-            </button>
+          <div className="w-full sm:w-fit flex justify-end sm:justify-start">
+            <div className="flex items-center gap-3">
+              <button className="button-navigate upcoming-prev">
+                <ArrowRight />
+                {/* next */}
+              </button>
+              <button className="button-navigate upcoming-next">
+                <ArrowLeft />
+                {/* prev */}
+              </button>
+            </div>
           </div>
         </div>
         <Swiper
