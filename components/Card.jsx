@@ -57,8 +57,9 @@ const Card = () => {
   }
   return (
     <section className="mb-16">
-      <div className="flex justify-between px-5 mt-16 mb-5 md:px-0">
-        <div className="flex items-center gap-3 ">
+      <div className="flex items-stretch justify-between sm:px-5 mt-16 mb-5 md:px-0">
+        {/* for large device */}
+        <div className="sm:flex items-center gap-3 hidden">
           <button className="text-[#7A7977] text-xs lg:text-sm  px-3 py-1 rounded-md 2xl:rounded-lg border border-[#7A7977] uppercase font-bold">
             the last
           </button>
@@ -69,8 +70,35 @@ const Card = () => {
             change
           </button>
         </div>
-        <div className="flex items-center gap-8">
-          <button className="text-[#30373F] text-xs lg:text-sm 2xl:text-xl px-3 2xl:px-6 h-8 rounded 2xl:rounded-md uppercase font-semibold bg-[#F9C306]">
+        {/* for small device */}
+        <div className="block sm:hidden">
+          <div className="dropdown dropdown-hover">
+            <div
+              tabIndex={0}
+              role="button"
+              className="h-8 text-[#7A7977] text-xs lg:text-sm  px-3 py-1 rounded-md 2xl:rounded-lg border border-[#7A7977] uppercase font-bold flex justify-center items-center"
+            >
+              the last
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-30 menu p-2 shadow bg-base-200 rounded-box w-52 mt-3"
+            >
+              <li>
+                <button className="text-black text-xs lg:text-sm px-3 py-1 uppercase font-bold mb-2">
+                  show more
+                </button>
+              </li>
+              <li>
+                <button className="text-black text-xs lg:text-sm  px-3 py-1 uppercase font-bold">
+                  change
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 sm:gap-8">
+          <button className="text-[#30373F] text-[10px] sm:text-xs lg:text-sm 2xl:text-xl px-3 2xl:px-6 h-8 rounded 2xl:rounded-md uppercase font-semibold bg-[#F9C306] hidden sm:block">
             Download app
           </button>
 

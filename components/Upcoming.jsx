@@ -59,21 +59,21 @@ const Upcoming = () => {
     <>
       {/* current live carousel */}
       <section className="mb-16">
-        <div className="flex justify-between px-5 mt-16 mb-5 md:px-0 border-b border-[#30373F] pb-6">
-          <div className="flex items-center gap-5 ">
-            <span className="text-[#F9C306] underline underline-offset-8 font-medium text-sm 2xl:text-lg uppercase cursor-pointer">
+        <div className="flex flex-col sm:flex-row items-end sm:items-center justify-between sm:px-5 mt-16 mb-5 md:px-0 border-b border-[#30373F] pb-6 gap-5">
+          <div className="flex items-center gap-2 sm:gap-5">
+            <span className="text-[#F9C306] sm:underline underline-offset-2 md:underline-offset-8 font-medium text-xs sm:text-sm 2xl:text-lg uppercase cursor-pointer">
               upcoming in-game nfts
             </span>
             {/* divider */}
             <div className=" h-full w-[1px] bg-[#30373F]"></div>
             {/* divider */}
-            <span className="text-[#7A7977] font-medium text-sm 2xl:text-lg uppercase cursor-pointer hover:text-[#F9C306] hover:underline underline-offset-8 transition duration-150 ease-in">
+            <span className="text-[#7A7977] font-medium text-xs sm:text-sm 2xl:text-lg uppercase cursor-pointer hover:text-[#F9C306] hover:underline underline-offset-8 transition duration-150 ease-in">
               upcoming forging nfts
             </span>
             {/* divider */}
             <div className=" h-full w-[1px] bg-[#30373F]"></div>
             {/* divider */}
-            <span className="text-[#7A7977] font-medium text-sm 2xl:text-lg uppercase cursor-pointer hover:text-[#F9C306] hover:underline underline-offset-8 transition duration-150 ease-in">
+            <span className="text-[#7A7977] font-medium text-xs sm:text-sm 2xl:text-lg uppercase cursor-pointer hover:text-[#F9C306] hover:underline underline-offset-8 transition duration-150 ease-in">
               upcoming tickets
             </span>
           </div>

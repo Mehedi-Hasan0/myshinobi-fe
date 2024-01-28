@@ -57,7 +57,7 @@ const CurrentLive = () => {
   }
   return (
     <>
-      <section className="flex flex-row items-center justify-between gap-5 mb-16">
+      <section className="flex flex-col sm:flex-row items-end sm:items-center justify-between gap-5 mb-16">
         <label
           htmlFor="search"
           className="min-w-[300px] lg:min-w-[500px] 2xl:min-w-[600px] px-4 py-3 2xl:p-5 bg-[#30373F66] rounded-lg flex items-center gap-2 cursor-pointer"
@@ -109,15 +109,15 @@ const CurrentLive = () => {
 
       {/* current live carousel */}
       <section className="mb-16">
-        <div className="flex justify-between px-5 mt-16 mb-5 md:px-0 border-b border-[#30373F] pb-6">
-          <div className="flex items-center gap-5 ">
-            <span className="text-[#F9C306] underline underline-offset-8 font-medium text-sm 2xl:text-lg uppercase cursor-pointer">
+        <div className="flex justify-between sm:px-5 mt-16 mb-5 md:px-0 border-b border-[#30373F] pb-6">
+          <div className="flex items-center gap-2 sm:gap-5 ">
+            <span className="text-[#F9C306] underline underline-offset-8 font-medium text-xs sm:text-sm 2xl:text-lg uppercase cursor-pointer">
               Current live
             </span>
             {/* divider */}
             <div className=" h-full w-[1px] bg-[#30373F]"></div>
             {/* divider */}
-            <span className="text-[#7A7977] font-medium text-sm 2xl:text-lg uppercase cursor-pointer hover:text-[#F9C306] hover:underline underline-offset-8 transition duration-150 ease-in">
+            <span className="text-[#7A7977] font-medium text-xs sm:text-sm 2xl:text-lg uppercase cursor-pointer hover:text-[#F9C306] hover:underline underline-offset-8 transition duration-150 ease-in">
               Current live
             </span>
           </div>
