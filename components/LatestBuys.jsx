@@ -14,11 +14,11 @@ const LatestBuys = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <button className="button-navigate upcoming-prev">
+            <button className="button-navigate latestBuys-prev">
               <ArrowRight />
               {/* next */}
             </button>
-            <button className="button-navigate upcoming-next">
+            <button className="button-navigate latestBuys-next">
               <ArrowLeft />
               {/* prev */}
             </button>

@@ -31,7 +31,7 @@ const Banner = () => {
           </span>
 
           <div className="flex items-center gap-4">
-            <button className="text-[#30373F] px-4 py-2 2xl:py-4 2xl:px-6 bg-[#F9C306] uppercase text-lg rounded-md 2xl:rounded-lg">
+            <button className="text-[#30373F] px-4 py-2 2xl:py-4 2xl:px-6 bg-[#F9C306] hover:bg-transparent border border-[#F9C306] hover:text-white uppercase text-lg rounded-md 2xl:rounded-lg transition ease-in duration-200">
               mint <span className="font-bold">arena nft</span>
             </button>
             <button className="flex items-center gap-2 text-[#F9C306] uppercase px-4 py-2 2xl:py-4 2xl:px-6 rounded-md 2xl:rounded-lg border border-[#F9C306]">

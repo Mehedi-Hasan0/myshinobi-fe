@@ -10,7 +10,7 @@ const Media = () => {
           <h4 className="text-white font-bold text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl">
             Media
           </h4>
-          <p className="font-medium text-xs lg:text-sm 2xl:text-base text-[#e4e4e4cb]">
+          <p className="font-medium text-sm lg:text-base 2xl:text-lg text-[#e4e4e4cb]">
             Unleash strategic brilliance in the interstellar battlefield of
             StarCraft 2023, where every decision shapes the fate of <br />{" "}
             galaxies. Engage, conquer, thrive! where every decision shapes the
@@ -36,9 +36,9 @@ const Media = () => {
                 alt="media 1"
                 width={564}
                 height={372}
-                className=" rounded-2xl"
+                className=" rounded-2xl w-full h-full"
               />
-              <div className="absolute top-16 left-1/3 z-30">
+              <div className="absolute inset-0 flex justify-center items-center z-30">
                 <Image
                   src={mediaItem.playSvg}
                   alt="play"

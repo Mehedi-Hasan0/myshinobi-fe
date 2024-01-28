@@ -12,20 +12,22 @@ const Navbar = () => {
     <>
       <nav className="container-padding lg:flex items-center justify-between gap-5 py-4 2xl:py-8 hidden relative z-40">
         <div className="flex items-center lg:gap-8 2xl:gap-14">
-          <Image
-            src="/assets/images/logo.png"
-            alt="logo"
-            width={100}
-            height={104}
-            className="w-20"
-          />
+          <Link href="/">
+            <Image
+              src="/assets/images/logo.png"
+              alt="logo"
+              width={100}
+              height={104}
+              className="w-20"
+            />
+          </Link>
 
           <div className="flex items-center flex-nowrap">
             {navlinks.map((link, i) => (
               <Link
                 href={link.path}
                 key={link.label}
-                className={`text-white p-4 uppercase text-xs xl:text-base text-nowrap ${
+                className={`text-white p-4 uppercase text-xs xl:text-base text-nowrap hover:text-primary transition duration-200 ease-in ${
                   link.active && "text-primary"
                 }`}
               >
@@ -36,7 +38,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-stretch gap-2 lg:gap-4">
-          <button className="px-6 py-1 border border-[#F9C306] rounded-md flex justify-center items-center">
+          <button className="px-6 py-1 border border-[#F9C306] rounded-md flex justify-center items-center hover:bg-[#F9C306] hover:border-transparent transition ease-in duration-200">
             <Image
               src="/assets/icons/opensea.svg"
               alt="icon"
@@ -45,7 +47,7 @@ const Navbar = () => {
               className="w-20"
             />
           </button>
-          <button className="px-6 py-[2px] border border-[#F9C306] rounded-md bg-[#F9C306]">
+          <button className="px-6 py-[2px] border border-[#F9C306] rounded-md bg-[#F9C306] hover:bg-transparent transition ease-in duration-200">
             <Image
               src="/assets/icons/kainu.svg"
               alt="icon"

@@ -1,8 +1,32 @@
+"use client";
+
 import { footerNeedhelp, footerProduct, footerSocialLink } from "@/constant";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const Footer = () => {
+  const [btnHovered, setBtnHovered] = useState({
+    btn1: false,
+    btn2: false,
+    btn3: false,
+    btn4: false,
+  });
+
+  const handleMouseHover = (btnName) => {
+    setBtnHovered((prevBtnStates) => ({
+      ...prevBtnStates,
+      [btnName]: !prevBtnStates[btnName],
+    }));
+  };
+
+  const handleMouseOut = (btnName) => {
+    setBtnHovered((prevBtnStates) => ({
+      ...prevBtnStates,
+      [btnName]: !prevBtnStates[btnName],
+    }));
+  };
+
   return (
     <footer className="text-white">
       <section className="py-10 lg:py-16 flex flex-col justify-center items-center gap-4 lg:gap-8  container-padding">
@@ -24,28 +48,64 @@ const Footer = () => {
 
         {/* btn */}
         <div className="flex items-center flex-wrap justify-center gap-3 lg:gap-4">
-          <button className="bg-[#F9C306] px-4 py-2 2xl:py-3 rounded-lg flex items-center gap-2 uppercase text-sm lg:text-base 2xl:text-lg text-[#30373F] font-semibold">
+          <button
+            className="bg-[#F9C306] border border-[#F9C306] hover:bg-transparent hover:text-white transition duration-200 ease-in px-4 py-2 2xl:py-3 rounded-lg flex items-center gap-2 uppercase text-sm lg:text-base 2xl:text-lg text-[#30373F] font-semibold"
+            onMouseEnter={() => {
+              handleMouseHover("btn1");
+            }}
+            onMouseLeave={() => {
+              handleMouseHover("btn1");
+            }}
+          >
             <p>play katanainu</p>
             <Image
-              src="/assets/icons/arrow-up.svg"
+              src={
+                btnHovered.btn1
+                  ? "/assets/icons/arrow-up-white.svg"
+                  : "/assets/icons/arrow-up.svg"
+              }
               alt="arrow"
               width={20}
               height={20}
             />
           </button>
-          <button className="border border-[#F9C306] px-4 py-2 2xl:py-3 rounded-lg flex items-center gap-2 uppercase text-sm lg:text-base 2xl:text-lg text-white font-semibold">
+          <button
+            className="border border-[#F9C306] hover:bg-[#F9C306] hover:border-transparent hover:text-[#30373F] transition duration-200 ease-in px-4 py-2 2xl:py-3 rounded-lg flex items-center gap-2 uppercase text-sm lg:text-base 2xl:text-lg text-white font-semibold"
+            onMouseEnter={() => {
+              handleMouseHover("btn2");
+            }}
+            onMouseLeave={() => {
+              handleMouseHover("btn2");
+            }}
+          >
             <p>Buy $kata token</p>
             <Image
-              src="/assets/icons/arrow-up-white.svg"
+              src={
+                !btnHovered.btn2
+                  ? "/assets/icons/arrow-up-white.svg"
+                  : "/assets/icons/arrow-up.svg"
+              }
               alt="arrow"
               width={20}
               height={20}
             />
           </button>
-          <button className="border border-[#F9C306] px-4 py-2 2xl:py-3 rounded-lg flex items-center gap-2 uppercase text-sm lg:text-base 2xl:text-lg text-white font-semibold">
+          <button
+            className="border border-[#F9C306] hover:bg-[#F9C306] hover:border-transparent hover:text-[#30373F] transition duration-200 ease-in px-4 py-2 2xl:py-3 rounded-lg flex items-center gap-2 uppercase text-sm lg:text-base 2xl:text-lg text-white font-semibold"
+            onMouseEnter={() => {
+              handleMouseHover("btn3");
+            }}
+            onMouseLeave={() => {
+              handleMouseHover("btn3");
+            }}
+          >
             <p>Go to kainu.io marketplace</p>
             <Image
-              src="/assets/icons/arrow-up-white.svg"
+              src={
+                !btnHovered.btn3
+                  ? "/assets/icons/arrow-up-white.svg"
+                  : "/assets/icons/arrow-up.svg"
+              }
               alt="arrow"
               width={20}
               height={20}
@@ -66,13 +126,15 @@ const Footer = () => {
           {/* logo and texts */}
           <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 flex-1">
             {/* images */}
-            <Image
-              src="/assets/images/logo2.png"
-              alt="logo"
-              width={236}
-              height={96}
-              className="w-32"
-            />
+            <Link href="/">
+              <Image
+                src="/assets/images/logo2.png"
+                alt="logo"
+                width={236}
+                height={96}
+                className="w-32"
+              />
+            </Link>
             {/* subscribe to newsleteer */}
             <div className="flex flex-col gap-3">
               <p className="text-[#7A7977] text-base font-medium uppercase">
@@ -90,10 +152,22 @@ const Footer = () => {
                   className="w-full focus-visible:outline-none bg-transparent cursor-pointer text-white px-4"
                 />
 
-                <button className="uppercase text-[#30373F] text-xs font-bold px-3 py-[6px] rounded-md bg-[#F9C306] flex items-center gap-2 min-w-[114px]">
+                <button
+                  className="uppercase text-[#30373F] text-xs font-bold px-3 py-[6px] rounded-md bg-[#F9C306] border border-[#F9C306] hover:text-white hover:bg-transparent transition duration-200 ease-in flex items-center gap-2 min-w-[114px]"
+                  onMouseEnter={() => {
+                    handleMouseHover("btn4");
+                  }}
+                  onMouseLeave={() => {
+                    handleMouseHover("btn4");
+                  }}
+                >
                   <p>subscribe</p>
                   <Image
-                    src="/assets/icons/arrow-up.svg"
+                    src={
+                      btnHovered.btn4
+                        ? "/assets/icons/arrow-up-white.svg"
+                        : "/assets/icons/arrow-up.svg"
+                    }
                     alt="arrow up"
                     width={18}
                     height={18}
@@ -140,7 +214,7 @@ const Footer = () => {
               <Link
                 href={link.path}
                 key={link.label}
-                className="px-3 py-2 cursor-pointer text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base w-fit"
+                className="px-3 py-2 cursor-pointer text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base w-fit hover:text-primary transition duration-200 ease-in"
               >
                 {link.label}
               </Link>
@@ -156,7 +230,7 @@ const Footer = () => {
               <Link
                 href={link.path}
                 key={link.label}
-                className="px-3 py-2 cursor-pointer text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base w-fit"
+                className="px-3 py-2 cursor-pointer text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base w-fit hover:text-primary transition duration-200 ease-in"
               >
                 {link.label}
               </Link>
@@ -233,12 +307,18 @@ const Footer = () => {
 
         {/* terms and others */}
         <div className="flex items-center">
-          <p className="px-3 py-2 text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base">
+          <Link
+            href="/"
+            className="px-3 py-2 text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base"
+          >
             Terms of Service
-          </p>
-          <p className="px-3 py-2 text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base">
+          </Link>
+          <Link
+            href="/"
+            className="px-3 py-2 text-[#BEC1CE] text-xs lg:text-sm 2xl:text-base"
+          >
             Cookies Policies
-          </p>
+          </Link>
         </div>
       </section>
     </footer>

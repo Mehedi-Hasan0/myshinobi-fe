@@ -43,7 +43,7 @@ const Newsletter = () => {
                 className="w-full focus-visible:outline-none bg-transparent cursor-pointer text-white px-4"
               />
 
-              <button className="uppercase text-[#30373F] text-xs font-bold px-3 py-[6px] rounded-md bg-[#F9C306]">
+              <button className="uppercase text-[#30373F] text-xs font-bold px-3 py-[6px] rounded-md bg-[#F9C306] border border-[#F9C306] hover:border-[#F9C306] hover:bg-transparent hover:text-white transition duration-200 ease-in">
                 subscribe
               </button>
             </label>

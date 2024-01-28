@@ -83,7 +83,7 @@ const CurrentLiveCarouselCard = ({
               width={20}
               height={20}
             />
-            <p className="text-[#F9C306] text-base 2xl:text-lg font-semibold">
+            <p className="text-white text-base 2xl:text-lg font-semibold">
               Ethereum
             </p>
           </div>

@@ -16,7 +16,7 @@ const NftMining = () => {
     <section className="mt-8 sm:mt-16">
       <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-10 md:gap-32">
         {/* header */}
-        <h2 className="text-[#E4E4E4] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-bold sm:flex-1">
+        <h2 className="text-[#E4E4E4] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold sm:flex-1">
           Champion Forging <br className="hidden sm:block" /> Collection Gen1
         </h2>
         <p className="text-[#D0D4EA] text-xs md:text-sm xl:text-base 2xl:text-xl sm:w-[400px] md:mt-5 sm:flex-1">
@@ -188,7 +188,7 @@ const NftMining = () => {
               </div>
 
               {/* mint now btn */}
-              <button className="min-w-[170px] text-[#30373F] bg-[#F9C306] text-center text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl uppercase rounded-md font-semibold py-2">
+              <button className="min-w-[170px] text-[#30373F] bg-[#F9C306] border border-[#F9C306] hover:bg-transparent hover:text-white transition duration-200 ease-in text-center text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl uppercase rounded-md font-semibold py-2">
                 mint now!
               </button>
             </div>
@@ -198,7 +198,7 @@ const NftMining = () => {
 
             {/* public sale */}
             <div className="flex flex-col gap-3 md:gap-3 lg:gap-4 xl:gap-5 2xl:gap-6">
-              <button className="px-3 py-2 md:px-4 lg:px-5 lg:py-3 2xl:px-6 2xl:py-4 bg-[#E4E4E41A] uppercase rounded-md text-white font-medium w-fit">
+              <button className="px-3 py-2 md:px-4 lg:px-5 lg:py-3 2xl:px-6 2xl:py-4 bg-[#E4E4E41A] hover:bg-[#F9C306] hover:text-[#30373F] transition duration-200 ease-in uppercase rounded-md text-white font-medium w-fit">
                 public sale
               </button>
 
