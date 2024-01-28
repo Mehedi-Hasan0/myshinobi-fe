@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const Banner = () => {
+  const [btnHover, setBtnHover] = useState(false);
   return (
     <section className="my-6">
       <div
@@ -30,13 +33,25 @@ const Banner = () => {
             </p>
           </span>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-stretch gap-4">
             <button className="text-[#30373F] px-4 py-2 2xl:py-4 2xl:px-6 bg-[#F9C306] hover:bg-transparent border border-[#F9C306] hover:text-white uppercase text-lg rounded-md 2xl:rounded-lg transition ease-in duration-200">
               mint <span className="font-bold">arena nft</span>
             </button>
-            <button className="flex items-center gap-2 text-[#F9C306] uppercase px-4 py-2 2xl:py-4 2xl:px-6 rounded-md 2xl:rounded-lg border border-[#F9C306]">
+            <button
+              className="flex items-center gap-2 text-primary uppercase px-4 py-2 2xl:py-4 2xl:px-6 rounded-md 2xl:rounded-lg border border-[#F9C306] hover:border-transparent hover:bg-[#F9C306] hover:text-[#30373F] transition duration-200 ease-in font-medium"
+              onMouseEnter={() => {
+                setBtnHover(true);
+              }}
+              onMouseLeave={() => {
+                setBtnHover(false);
+              }}
+            >
               <Image
-                src="/assets/icons/play.svg"
+                src={
+                  btnHover
+                    ? "/assets/icons/play-black.svg"
+                    : "/assets/icons/play.svg"
+                }
                 alt="play btn"
                 width={24}
                 height={24}

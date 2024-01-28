@@ -104,7 +104,7 @@ const Navbar = () => {
               <li key={link.label}>
                 <Link
                   href={link.path}
-                  className={`text-white p-4 uppercase text-xs xl:text-base text-nowrap ${
+                  className={`text-white p-4 uppercase text-xs xl:text-base text-nowrap hover:text-primary transition duration-200 ease-in ${
                     link.active && "text-primary"
                   }`}
                 >
@@ -115,7 +115,7 @@ const Navbar = () => {
           </ul>
           {/* btn */}
           <div className="flex flex-col items-stretch gap-4 lg:gap-4 py-3">
-            <button className="px-6 py-1 border border-[#F9C306] rounded-md flex justify-center items-center w-fit">
+            <button className="px-6 py-1 border border-[#F9C306] rounded-md flex justify-center items-center hover:bg-[#F9C306] hover:border-transparent transition ease-in duration-200 w-fit">
               <Image
                 src="/assets/icons/opensea.svg"
                 alt="icon"
@@ -124,7 +124,7 @@ const Navbar = () => {
                 className="w-20"
               />
             </button>
-            <button className="px-6 py-[2px] border border-[#F9C306] rounded-md bg-[#F9C306] w-fit">
+            <button className="px-6 py-[2px] border border-[#F9C306] rounded-md bg-[#F9C306] hover:bg-transparent transition ease-in duration-200 w-fit">
               <Image
                 src="/assets/icons/kainu.svg"
                 alt="icon"
